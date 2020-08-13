@@ -1,0 +1,89 @@
+# GIF header
+47 49 46
+38 37 61
+
+# Width
+08 00
+# Height
+08 00
+
+# GCT follows for ???
+80
+
+# BG Color #0
+01
+
+# Aspect ratio
+42
+
+# Color #0
+80 80 ff
+
+# Color #1
+ff 80 80
+
+#Graphic Control Extension for frame #1
+21 F9                  
+
+04 #          4          - four bytes of data follow
+04 #                     - bit-fields 3x:3:1:1, 000|001|0|0 -> Do not dispose
+00 00  #                  - 0.00 sec delay before painting next frame
+00  #                    - no transparent color
+00  #
+
+# Image descriptor magic number
+2c
+
+# NW corner
+00 00 00 00
+
+# Width and height
+04 00 04 00
+
+# No local color table
+00
+
+## Image data
+# Minimum code size
+02
+
+# LZW coded image
+06 0c 1c 09 ab 07 05
+
+# End of image data
+00
+
+#Graphic Control Extension for frame #2
+21 F9                  
+
+04 #          4          - four bytes of data follow
+04 #                     - bit-fields 3x:3:1:1, 000|001|0|0 -> Do not dispose
+09 00  #                  - 0.09 sec delay before painting next frame
+00  #                    - no transparent color
+00  #
+
+# Image descriptor magic number
+2c
+
+# NW corner
+04 00 04 00
+
+# Width and height
+04 00 04 00
+
+# No local color table
+00
+
+## Image data
+# Minimum code size
+02
+
+# LZW coded image
+06 0c 1c 09 ab 07 05
+
+# End of image data
+00
+
+# End of gif
+3b                           
+

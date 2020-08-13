@@ -1,0 +1,32 @@
+0:     47 49 46
+       38 39 61     #GIF89a      Header
+                    #            Logical Screen Descriptor
+6:     03 00        #3            - logical screen width in pixels
+8:     05 00        #5            - logical screen height in pixels
+A:     F7           #             - GCT follows for 256 colors with resolution 3 × 8 bits/primary;
+                    #               the lowest 3 bits represent the bit depth minus 1, the highest true bit means that the GCT is present
+B:     00           #0            - background color #0
+C:     00           #             - default pixel aspect ratio
+                   #R    G    B  Global Color Table
+D:     00 00 00    #0    0    0   - color #0 black
+10:    80 00 00  #128    0    0   - color #1
+13:    80 00 00  #128    0    0   - color #2
+16:    80 00 00  #128    0    0   - color #3
+85:    00 00 00    #0    0    0   - color #40 black
+#:                                       :
+30A:   FF FF FF # 255  255  255   - color #255 white
+30D:   21 F9     #               Graphic Control Extension (comment fields precede this in most files)
+30F:   04        #   4            - 4 bytes of GCE data follow
+310:   01        #                - there is a transparent background color (bit field; the lowest bit signifies transparency)
+311:   00 00     #                - delay for animation in hundredths of a second: not used
+313:   10        #  16            - color #16 is transparent
+314:   00        #                - end of GCE block
+315:   2C        #               Image Descriptor
+316:   00 00 00 00# (0,0)         - NW corner position of image in logical screen
+31A:   03 00 05 00# (3,5)         - image width and height in pixels
+31E:   00         #               - no local color table
+31F:   08         #  8           Start of image - LZW minimum code size
+320:   0B         # 11            - 11 bytes of LZW encoded image data follow
+321:   00 51 FC 1B 28 70 A0 C1 83 01 01#
+32C:   00                   #     - end of image data
+32D:   3B                  #     GIF file terminator
